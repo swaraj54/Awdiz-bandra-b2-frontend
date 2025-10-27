@@ -1,5 +1,20 @@
+import { useNavigate } from "react-router";
+
 function Home() {
-  return <h1>Welcome to Home Page</h1>;
+  const router = useNavigate();
+
+  return (
+    <div>
+      <h1>Welcome to Home Page</h1>
+      <button
+        onClick={() => {
+          router("/use-effect");
+        }}
+      >
+        Go to UseEffect Page
+      </button>
+    </div>
+  );
 }
 
 export default Home;

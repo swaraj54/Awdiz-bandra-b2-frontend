@@ -4,6 +4,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import UseState from "./pages/UseState";
+import UseEffect from "./pages/UseEffect";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
        <Route path="/use-state" element={<UseState />} />
+       <Route path="/use-effect" element={<UseEffect />} />
       {/* <Route path="/use-effect" element={<UseEffect />} /> */}
     </Routes>
   );
