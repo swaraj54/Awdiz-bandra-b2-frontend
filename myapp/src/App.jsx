@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useNavigate, useParams } from "react-router";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -8,6 +8,8 @@ import UseEffect from "./pages/UseEffect";
 import { useState } from "react";
 import Products from "./pages/Products";
 import SingleProduct from "./pages/SingleProduct";
+import UseMemo from "./pages/UseMemo";
+import UseCallback from "./pages/UseCallback";
 
 function App() {
   const [products, setProducts] = useState([
@@ -82,8 +84,31 @@ function App() {
       <Route path="/use-effect" element={<UseEffect />} />
       <Route path="/products" element={<Products products={products} />} />
       <Route path="/single-product/:id" element={<SingleProduct />} />
+      <Route path="/use-memo" element={<UseMemo />} />
+      <Route path="/use-callback" element={<UseCallback />} />
     </Routes>
   );
 }
 
 export default App;
+
+
+// useState 
+// useEffect 
+// useNavigate
+// useParams 
+// useMemo 
+// memo()
+// useCallback
+
+// useRef 
+// useReducer 
+
+// useContext 
+// Context api 
+
+
+// Redux 
+
+
+
