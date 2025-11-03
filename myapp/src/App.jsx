@@ -10,6 +10,8 @@ import Products from "./pages/Products";
 import SingleProduct from "./pages/SingleProduct";
 import UseMemo from "./pages/UseMemo";
 import UseCallback from "./pages/UseCallback";
+import UseRef from "./pages/UseRef";
+import UseReducer from "./pages/UseReducer";
 
 function App() {
   const [products, setProducts] = useState([
@@ -86,6 +88,8 @@ function App() {
       <Route path="/single-product/:id" element={<SingleProduct />} />
       <Route path="/use-memo" element={<UseMemo />} />
       <Route path="/use-callback" element={<UseCallback />} />
+      <Route path="/use-ref" element={<UseRef />} />
+      <Route path="/use-reducer" element={<UseReducer />} />
     </Routes>
   );
 }
