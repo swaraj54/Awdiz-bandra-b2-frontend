@@ -12,6 +12,7 @@ import UseMemo from "./pages/UseMemo";
 import UseCallback from "./pages/UseCallback";
 import UseRef from "./pages/UseRef";
 import UseReducer from "./pages/UseReducer";
+import ContextApi from "./pages/ContextApi";
 
 function App() {
   const [products, setProducts] = useState([
@@ -90,6 +91,7 @@ function App() {
       <Route path="/use-callback" element={<UseCallback />} />
       <Route path="/use-ref" element={<UseRef />} />
       <Route path="/use-reducer" element={<UseReducer />} />
+      <Route path="/context-api" element={<ContextApi />} />
     </Routes>
   );
 }
@@ -104,15 +106,31 @@ export default App;
 // useMemo 
 // memo()
 // useCallback
-
 // useRef 
 // useReducer 
-
 // useContext 
 // Context api 
 
 
-// Redux 
+// Redux - 1 lectrures
+// Form handling - 1 lectures
+// Deployment of frontend application 
+// implement backend api into frontend application - 1 lecture
 
 
+// Project 
+// Repo - Amazon clone - 
+// install react app 
+// routing 
+// redux setup 
+// authentication - register login
+// 2 roles - user , admin
+// admin - add Project , edit Project, delete products 
+// user - view products , add to cart , checkout ( mock payment )
+
+
+// Friday - create repor 
+// install react app 
+// routing 
+// login register page
 
