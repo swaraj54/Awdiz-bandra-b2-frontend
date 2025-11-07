@@ -13,6 +13,7 @@ import UseCallback from "./pages/UseCallback";
 import UseRef from "./pages/UseRef";
 import UseReducer from "./pages/UseReducer";
 import ContextApi from "./pages/ContextApi";
+import Todo from "./pages/Todo";
 
 function App() {
   const [products, setProducts] = useState([
@@ -92,6 +93,7 @@ function App() {
       <Route path="/use-ref" element={<UseRef />} />
       <Route path="/use-reducer" element={<UseReducer />} />
       <Route path="/context-api" element={<ContextApi />} />
+      <Route path="/todo" element={<Todo />} />
     </Routes>
   );
 }
@@ -110,10 +112,10 @@ export default App;
 // useReducer 
 // useContext 
 // Context api 
+// todo application
 
-
+// Form handling - 1 lectures REGISTER LOGIN
 // Redux - 1 lectrures
-// Form handling - 1 lectures
 // Deployment of frontend application 
 // implement backend api into frontend application - 1 lecture
 
