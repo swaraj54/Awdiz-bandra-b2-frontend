@@ -115,9 +115,11 @@ export default App;
 // todo application
 
 // Form handling - 1 lectures REGISTER LOGIN
+
+
 // Redux - 1 lectrures
 // Deployment of frontend application 
-// implement backend api into frontend application - 1 lecture
+// implement backend api into frontend application - 1 lecture - fakestoreapi
 
 
 // Project 
