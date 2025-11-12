@@ -100,7 +100,7 @@ function App() {
 
 export default App;
 
-
+// Completed Topics 
 // useState 
 // useEffect 
 // useNavigate
@@ -113,12 +113,11 @@ export default App;
 // useContext 
 // Context api 
 // todo application
-
 // Form handling - 1 lectures REGISTER LOGIN
+// Deployment of frontend application 
 
 
 // Redux - 1 lectrures
-// Deployment of frontend application 
 // implement backend api into frontend application - 1 lecture - fakestoreapi
 
 
@@ -137,4 +136,14 @@ export default App;
 // install react app 
 // routing 
 // login register page
+// Nykaa
 
+// 14-11-2025 Navbar - 3 -
+// 16-11-2025 Home Page- https://www.nykaa.com/ - 
+// 17-11-2025 Login Page- https://www.nykaa.com/auth
+// 17-11-2025 Register Page- https://www.nykaa.com/auth
+// 19-11-2025 Products Page- https://www.nykaa.com/mens/beard-care/beard-oil/c/2799
+// 21-11-2025 Single Product page - https://www.nykaa.com/the-man-company-almond-thyme-beard-oil/p/40193?productId=40193&pps=1
+// 23-11-2025 Cart Page -
+// 26-11-2025 Orders Page
+// 28-11-2025 Profile Page
