@@ -14,6 +14,8 @@ import UseRef from "./pages/UseRef";
 import UseReducer from "./pages/UseReducer";
 import ContextApi from "./pages/ContextApi";
 import Todo from "./pages/Todo";
+import FakeProducts from "./pages/FakeProducts";
+import FakeSingleProduct from "./pages/FakeSingleProduct";
 
 function App() {
   const [products, setProducts] = useState([
@@ -94,11 +96,17 @@ function App() {
       <Route path="/use-reducer" element={<UseReducer />} />
       <Route path="/context-api" element={<ContextApi />} />
       <Route path="/todo" element={<Todo />} />
+      <Route path="/fake-products" element={<FakeProducts />} />
+      <Route path="/fake-single-product/:productId" element={<FakeSingleProduct />} />
     </Routes>
   );
 }
 
 export default App;
+
+// http://localhost:5137/login 
+
+// http://localhost:8000/login
 
 // Completed Topics 
 // useState 
@@ -117,8 +125,8 @@ export default App;
 // Deployment of frontend application 
 
 
-// Redux - 1 lectrures
 // implement backend api into frontend application - 1 lecture - fakestoreapi
+// Redux - 1 lectrures
 
 
 // Project 
