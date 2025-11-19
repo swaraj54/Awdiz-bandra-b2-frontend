@@ -16,6 +16,7 @@ import ContextApi from "./pages/ContextApi";
 import Todo from "./pages/Todo";
 import FakeProducts from "./pages/FakeProducts";
 import FakeSingleProduct from "./pages/FakeSingleProduct";
+import ReduxCounter from "./pages/ReduxCounter";
 
 function App() {
   const [products, setProducts] = useState([
@@ -98,6 +99,7 @@ function App() {
       <Route path="/todo" element={<Todo />} />
       <Route path="/fake-products" element={<FakeProducts />} />
       <Route path="/fake-single-product/:productId" element={<FakeSingleProduct />} />
+      <Route path="/redux-counter" element={<ReduxCounter />} />
     </Routes>
   );
 }
@@ -123,9 +125,8 @@ export default App;
 // todo application
 // Form handling - 1 lectures REGISTER LOGIN
 // Deployment of frontend application 
-
-
 // implement backend api into frontend application - 1 lecture - fakestoreapi
+
 // Redux - 1 lectrures
 
 

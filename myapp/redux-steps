@@ -1,0 +1,13 @@
+Documentation - https://redux-toolkit.js.org/tutorials/quick-start
+
+Step 1 : install redux tollkit and react redux packages
+npm install @reduxjs/toolkit react-redux
+
+Step 2 : create folder structure
+src/redux/
+    store.js 
+    index.js
+
+Step 3 : Import Provider and store in main.jsx file and wrap around app component
+    
+Step 4 : Create slice in store.js 
