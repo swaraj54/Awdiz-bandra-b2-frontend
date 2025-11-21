@@ -1,6 +1,11 @@
 import React, { useRef, useState } from "react";
+import { login } from "../redux/slices/authSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 
 const Login = () => {
+  const router = useNavigate();
+  const dispatch = useDispatch();
   const [passwordType, setPasswordType] = useState("password");
   const [userData, setUserData] = useState({
     email: "",
@@ -12,18 +17,36 @@ const Login = () => {
     console.log("name: ", event.target.name);
     setUserData({ ...userData, [event.target.name]: event.target.value });
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       if (!userData.email || !userData.password) {
         alert("All fields are required.");
       } else {
         // api call
-        setUserData({
-          email: "",
-          password: "",
-        });
-        alert("Registeration COmpleted.");
+        // const response = await axios.post(
+        //   "http://localhost:8000/api/v1/auth/login",
+        //   { userData }
+        // );
+        const response = {
+          data: {
+            success: true,
+            userData: {
+              username: "swaraj54",
+              user: "Swaraj Jadhav",
+              profileImgUrl: "htps;awdwadawdwadwa",
+            },
+          },
+        };
+        if (response.data.success) {
+          dispatch(login(response.data.userData));
+          setUserData({
+            email: "",
+            password: "",
+          });
+          alert("Login COmpleted.");
+          router("/");
+        }
       }
     } catch (error) {
       console.log(error);
@@ -41,7 +64,7 @@ const Login = () => {
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h1>Register / Sign Up</h1>
+      <h1>Login / Sign In</h1>
       <form onSubmit={handleSubmit}>
         <label>Email:</label>
         <br />
