@@ -111,7 +111,7 @@ export default App;
 // http://localhost:8000/login
 
 // Completed Topics 
-// useState 
+// useState  -   ajwkdnwaokdmawmdk
 // useEffect 
 // useNavigate
 // useParams 
@@ -126,7 +126,6 @@ export default App;
 // Form handling - 1 lectures REGISTER LOGIN
 // Deployment of frontend application 
 // implement backend api into frontend application - 1 lecture - fakestoreapi
-
 // Redux - 1 lectrures
 
 
@@ -156,3 +155,22 @@ export default App;
 // 23-11-2025 Cart Page -
 // 26-11-2025 Orders Page
 // 28-11-2025 Profile Page
+
+// total 5.30 hour s daily
+
+// 10 am - 11 am - do revision - theory - based on your notes / create notes 
+
+// 2-4 pm - practice coding - chatgpt - topics - send me interview questions - eg todo list  
+
+// 7-8pm MWF - 7-9pm TTSS - project work - html css 
+
+// 8-9 pm MWF - lecture
+
+// 10.30 - 11 pm - go through youtube interview question videos  - important questions
+
+
+TEST 
+
+29-11 Pratical Test - eg - coding - create todo application with redux 
+2-12 Theory Test - What is usestate ? 
+3-12 Mock interview - Intro , educatiion, projects , questions 
