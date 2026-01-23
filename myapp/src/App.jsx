@@ -169,8 +169,8 @@ export default App;
 // 10.30 - 11 pm - go through youtube interview question videos  - important questions
 
 
-TEST 
+// TEST 
 
-29-11 Pratical Test - eg - coding - create todo application with redux 
-2-12 Theory Test - What is usestate ? 
-3-12 Mock interview - Intro , educatiion, projects , questions 
+// 29-11 Pratical Test - eg - coding - create todo application with redux 
+// 2-12 Theory Test - What is usestate ? 
+// 3-12 Mock interview - Intro , educatiion, projects , questions 

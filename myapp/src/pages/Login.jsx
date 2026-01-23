@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import { login } from "../redux/slices/authSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
+import axios from "axios";
+import axiosInstance from "../configs/axiosConfig";
 
 const Login = () => {
   const router = useNavigate();
@@ -24,27 +26,14 @@ const Login = () => {
         alert("All fields are required.");
       } else {
         // api call
-        // const response = await axios.post(
-        //   "http://localhost:8000/api/v1/auth/login",
-        //   { userData }
-        // );
-        const response = {
-          data: {
-            success: true,
-            userData: {
-              username: "swaraj54",
-              user: "Swaraj Jadhav",
-              profileImgUrl: "htps;awdwadawdwadwa",
-            },
-          },
-        };
+        const response = await axiosInstance.post("/auth/login", userData);
         if (response.data.success) {
           dispatch(login(response.data.userData));
           setUserData({
             email: "",
             password: "",
           });
-          alert("Login COmpleted.");
+          alert(response.data.message);
           router("/");
         }
       }

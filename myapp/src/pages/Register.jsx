@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useRef, useState } from "react";
 
 const Register = () => {
@@ -7,6 +8,7 @@ const Register = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    phone :""
   });
   console.log(userData, "userData");
   const handleChange = (event) => {
@@ -14,27 +16,40 @@ const Register = () => {
     console.log("name: ", event.target.name);
     setUserData({ ...userData, [event.target.name]: event.target.value });
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       if (
         !userData.name ||
         !userData.email ||
         !userData.password ||
-        !userData.confirmPassword
+        !userData.confirmPassword ||
+        !userData.phone
       ) {
         alert("All fields are required.");
       } else {
         console.log("else");
         if (userData.password === userData.confirmPassword) {
           // api call
-          setUserData({
-            name: "",
-            email: "",
-            password: "",
-            confirmPassword: "",
-          });
-          alert("Registeration COmpleted.");
+          const response = await axios.post(
+            "http://localhost:8000/api/v1/auth/register",
+            userData,
+          );
+          // userData : {    
+          //   name: "",
+          //   email: "",
+          //   password: "",
+          //   confirmPassword: "",}
+          console.log(response, "response from register");
+          if (response.data.success) {
+            setUserData({
+              name: "",
+              email: "",
+              password: "",
+              confirmPassword: "",
+            });
+            alert(response.data.message);
+          }
         } else {
           alert("Password and Confirm password not matched,");
         }
@@ -72,6 +87,15 @@ const Register = () => {
           value={userData.email}
           name="email"
           type="email"
+          onChange={handleChange}
+        />
+        <br />
+        <label>Phone:</label>
+        <br />
+        <input
+          value={userData.phone}
+          name="phone"
+          type="number"
           onChange={handleChange}
         />
         <br />
