@@ -10,8 +10,8 @@ const Login = () => {
   const dispatch = useDispatch();
   const [passwordType, setPasswordType] = useState("password");
   const [userData, setUserData] = useState({
-    email: "",
-    password: "",
+    email: "user5@gmail.com",
+    password: "a",
   });
   console.log(userData, "userData");
   const handleChange = (event) => {

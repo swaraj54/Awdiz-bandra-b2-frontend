@@ -8,7 +8,7 @@ function Home() {
 
   return (
     <div>
-      <h1>Welcome to Home Page {user?.user}</h1>
+      <h1>Welcome to Home Page {user?.name}</h1>
       <button
         onClick={() => {
           router("/use-effect");

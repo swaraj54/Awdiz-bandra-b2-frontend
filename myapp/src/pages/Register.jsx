@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
+import axiosInstance from "../configs/axiosConfig";
 
 const Register = () => {
   const [passwordType, setPasswordType] = useState("password");
@@ -8,7 +9,7 @@ const Register = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    phone :""
+    phone: "",
   });
   console.log(userData, "userData");
   const handleChange = (event) => {
@@ -31,11 +32,8 @@ const Register = () => {
         console.log("else");
         if (userData.password === userData.confirmPassword) {
           // api call
-          const response = await axios.post(
-            "http://localhost:8000/api/v1/auth/register",
-            userData,
-          );
-          // userData : {    
+          const response = await axiosInstance.post("/auth/register", userData);
+          // userData : {
           //   name: "",
           //   email: "",
           //   password: "",
