@@ -30,7 +30,18 @@ const Navbar = () => {
       }}
     >
       <h2 style={{ cursor: "pointer" }}>Home</h2>
-      <h2 style={{ cursor: "pointer" }}>Products</h2>
+      {user?.role === "seller" && (
+        <>
+          <h2 style={{ cursor: "pointer" }} onClick={() => router("/seller/add-products")}>
+            Add Products
+          </h2>
+          <h2 style={{ cursor: "pointer" }} onClick={() => router("/seller/view-products")}>
+            View added Products
+          </h2>
+          <h2 style={{ cursor: "pointer" }}>View Orders</h2>
+        </>
+      )}
+      {user?.user === "user" && <h2>Products</h2>}
       {user?.name ? (
         <h2 onClick={LogoutApiCall} style={{ cursor: "pointer" }}>
           Logout

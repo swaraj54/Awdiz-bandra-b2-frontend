@@ -10,6 +10,7 @@ const Register = () => {
     password: "",
     confirmPassword: "",
     phone: "",
+    role: "user",
   });
   console.log(userData, "userData");
   const handleChange = (event) => {
@@ -45,6 +46,8 @@ const Register = () => {
               email: "",
               password: "",
               confirmPassword: "",
+              role: "user",
+              phone: "",
             });
             alert(response.data.message);
           }
@@ -78,6 +81,14 @@ const Register = () => {
           type="text"
           onChange={handleChange}
         />
+        <br />
+        <label>Role:</label>
+        <br />
+        <select value={userData.role} name="role" onChange={handleChange}>
+          <option value="user">User</option>
+          <option value="seller">Seller</option>
+          <option value="admin">Admin</option>
+        </select>
         <br />
         <label>Email:</label>
         <br />

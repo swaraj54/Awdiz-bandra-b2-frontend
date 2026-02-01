@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 function Home() {
   const router = useNavigate();
   const user = useSelector((state) => state.auth.user);
-
+  console.log(user, "user in home page");
   return (
     <div>
       <h1>Welcome to Home Page {user?.name}</h1>

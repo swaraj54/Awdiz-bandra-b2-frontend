@@ -21,6 +21,8 @@ import Navbar from "./components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import axiosInstance from "./configs/axiosConfig";
 import { login } from "./redux/slices/authSlice";
+import AddProducts from "./pages/seller/AddProducts";
+import ViewProducts from "./pages/seller/ViewProducts";
 
 function App() {
   const dispatch = useDispatch();
@@ -130,6 +132,14 @@ function App() {
           element={<FakeSingleProduct />}
         />
         <Route path="/redux-counter" element={<ReduxCounter />} />
+
+        {/* // seller routes  */}
+        <Route path="/seller/add-products" element={<AddProducts />} />
+        <Route path="/seller/view-products" element={<ViewProducts />} />
+        {/* <Route path="/view-orders" element={<ViewOrders />} /> */}
+
+        {/* // admin routes  */}
+        {/* <Route path="/admin/dashboard" element={<AdminDashboard />} /> */}
       </Routes>
     </>
   );
