@@ -1,0 +1,14 @@
+Register Login - User, Seller, Admin - Completed
+Seller 
+Add Products - Completed 
+View added Products  - Completed
+
+User
+View Product - Pending
+Single product page - Pending
+Cart Page / Wishlist page - Pending
+Order page  - Pending
+
+Admin 
+Dashboard -  - Pending
+Details user/seller/orders/prducts  - Pending

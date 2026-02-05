@@ -1,7 +1,9 @@
 import { useState } from "react";
 import axiosInstance from "../../configs/axiosConfig";
+import { useNavigate } from "react-router";
 
 const AddProducts = () => {
+  const router = useNavigate();
   const [productData, setProductData] = useState({
     name: "",
     description: "",
@@ -43,6 +45,7 @@ const AddProducts = () => {
             img: "",
           });
           alert(response.data.message);
+          router("/seller/view-products");
         }
       }
     } catch (error) {

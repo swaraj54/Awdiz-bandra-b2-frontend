@@ -22,7 +22,9 @@ import { useDispatch, useSelector } from "react-redux";
 import axiosInstance from "./configs/axiosConfig";
 import { login } from "./redux/slices/authSlice";
 import AddProducts from "./pages/seller/AddProducts";
-import ViewProducts from "./pages/seller/ViewProducts";
+import ViewSellerProducts from "./pages/seller/ViewSellerProducts";
+import ViewProducts from "./pages/user/ViewProducts";
+import SingleProductPage from "./pages/user/SingleProductPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -135,8 +137,12 @@ function App() {
 
         {/* // seller routes  */}
         <Route path="/seller/add-products" element={<AddProducts />} />
-        <Route path="/seller/view-products" element={<ViewProducts />} />
+        <Route path="/seller/view-products" element={<ViewSellerProducts />} />
         {/* <Route path="/view-orders" element={<ViewOrders />} /> */}
+
+        {/* User Routes  */}
+        <Route path="/view-products" element={<ViewProducts />} />
+        <Route path="/single-product-page/:id" element={<SingleProductPage />} />
 
         {/* // admin routes  */}
         {/* <Route path="/admin/dashboard" element={<AdminDashboard />} /> */}

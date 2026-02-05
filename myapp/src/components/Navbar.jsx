@@ -14,6 +14,7 @@ const Navbar = () => {
       if (reponse.data.success) {
         dispatch(logout());
         alert(reponse.data.message);
+        router("/");
       }
     } catch (err) {
       console.log(err);
@@ -29,13 +30,27 @@ const Navbar = () => {
         alignItems: "center",
       }}
     >
-      <h2 style={{ cursor: "pointer" }}>Home</h2>
+      <h2 style={{ cursor: "pointer" }} onClick={() => router("/")}>
+        Home
+      </h2>
+      <h2
+        style={{ cursor: "pointer" }}
+        onClick={() => router("/view-products")}
+      >
+        Products
+      </h2>
       {user?.role === "seller" && (
         <>
-          <h2 style={{ cursor: "pointer" }} onClick={() => router("/seller/add-products")}>
+          <h2
+            style={{ cursor: "pointer" }}
+            onClick={() => router("/seller/add-products")}
+          >
             Add Products
           </h2>
-          <h2 style={{ cursor: "pointer" }} onClick={() => router("/seller/view-products")}>
+          <h2
+            style={{ cursor: "pointer" }}
+            onClick={() => router("/seller/view-products")}
+          >
             View added Products
           </h2>
           <h2 style={{ cursor: "pointer" }}>View Orders</h2>
@@ -44,7 +59,7 @@ const Navbar = () => {
       {user?.user === "user" && <h2>Products</h2>}
       {user?.name ? (
         <h2 onClick={LogoutApiCall} style={{ cursor: "pointer" }}>
-          Logout
+          Hi {user?.name}, Logout?
         </h2>
       ) : (
         <>
