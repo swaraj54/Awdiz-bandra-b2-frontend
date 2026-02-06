@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 import { login } from "../redux/slices/authSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import axios from "axios";
 import axiosInstance from "../configs/axiosConfig";
 
 const Login = () => {
+  const urlData = useSelector((state) => state.auth.lastVisitedUrl);
   const router = useNavigate();
   const dispatch = useDispatch();
   const [passwordType, setPasswordType] = useState("password");
@@ -34,7 +35,12 @@ const Login = () => {
             password: "",
           });
           alert(response.data.message);
-          router("/");
+          if (urlData) {
+            router(urlData);
+            dispatch(clearLastVisitedUrl());
+          } else {
+            router("/");
+          }
         }
       }
     } catch (error) {

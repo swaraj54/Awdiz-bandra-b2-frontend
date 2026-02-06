@@ -25,6 +25,7 @@ import AddProducts from "./pages/seller/AddProducts";
 import ViewSellerProducts from "./pages/seller/ViewSellerProducts";
 import ViewProducts from "./pages/user/ViewProducts";
 import SingleProductPage from "./pages/user/SingleProductPage";
+import Viewcart from "./pages/user/Viewcart";
 
 function App() {
   const dispatch = useDispatch();
@@ -142,7 +143,11 @@ function App() {
 
         {/* User Routes  */}
         <Route path="/view-products" element={<ViewProducts />} />
-        <Route path="/single-product-page/:id" element={<SingleProductPage />} />
+        <Route
+          path="/single-product-page/:id"
+          element={<SingleProductPage />}
+        />
+        <Route path="/view-cart" element={<Viewcart />} />
 
         {/* // admin routes  */}
         {/* <Route path="/admin/dashboard" element={<AdminDashboard />} /> */}

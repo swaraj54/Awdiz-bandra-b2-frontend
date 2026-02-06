@@ -56,7 +56,9 @@ const Navbar = () => {
           <h2 style={{ cursor: "pointer" }}>View Orders</h2>
         </>
       )}
-      {user?.user === "user" && <h2>Products</h2>}
+      {user?.role === "user" && (
+        <h2 onClick={() => router("/view-cart")}>Cart</h2>
+      )}
       {user?.name ? (
         <h2 onClick={LogoutApiCall} style={{ cursor: "pointer" }}>
           Hi {user?.name}, Logout?
