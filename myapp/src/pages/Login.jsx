@@ -41,9 +41,12 @@ const Login = () => {
           } else {
             router("/");
           }
+        } else {
+          alert(response.data.message);
         }
       }
     } catch (error) {
+      alert(error.response.data.message);
       console.log(error);
     }
   };
